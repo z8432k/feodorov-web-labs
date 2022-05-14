@@ -7,3 +7,35 @@ footer {
     background-color: lightcyan;
     padding: 20px 10px;
 }
+
+#gallery {
+    border: 2px solid red;
+    padding: 3px;
+    margin: 10px 0;
+    max-width: 300px;;
+}
+
+#gallery > div {
+    border: 2px solid green;
+    padding: 3px;
+}
+
+#gallery .caption {
+    margin-top: 5px;
+}
+
+#gallery .controls {
+    margin-top: 5px;
+    border: 2px solid lightsalmon;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#gallery .control {
+    padding: 5px 10px;
+}
+
+#gallery .frame img {
+    width: 100%;
+}

@@ -1,11 +1,12 @@
 <!doctype html>
 
 <html lang="ru">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Дополненная  реальность</title>
+    <title>Дополненная реальность</title>
 
     <link rel="stylesheet" href="assets/styles.css">
 
@@ -14,8 +15,8 @@
             background-color: lightyellow;
         }
 
-        #table1 .tablecell  {
-            border: 2px solid #556B2FFF;
+        #table1 .tablecell {
+            border: 2px solid #556B2F;
             padding: 10px;
             width: 150px;
             text-align: center;
@@ -46,83 +47,216 @@
 
 <body>
 
-<header>
-    <h1>Дополненная  реальность [1]</h1>
-</header>
+    <header>
+        <h1>Дополненная реальность [1]</h1>
+    </header>
 
-<nav>
-    <a href="second.html">Вторая страница</a>
-</nav>
+    <nav>
+        <a href="second.html">Вторая страница</a>
+    </nav>
 
-<hr />
-<main>
-    <section>
-        <h2>Таблица</h2>
+    <hr />
+    <main>
+        <section>
+            <h2>Таблица</h2>
 
-        <table id="table1">
-            <caption>Объединение столбцов</caption>
-            <thead>
-            <tr>
-                <th class="tablehead">столбец 1</th>
-                <th class="tablehead">столбец 2</th>
-                <th class="tablehead">столбец 3</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td class="tablecell"> ячейка 111111111 11111111 </td>
-                <td class="tablecell">
-                    <img src="assets/html5.png" alt="html5 logo"/>
-                </td>
-                <td class="tablecell"> ячейка 3</td>
-            </tr>
-            <tr>
-                <td class="tablecell" colspan = 2> ячейка 4 </td>
-                <td class="tablecell"> ячейка 6</td>
-            </tr>
-            <tr>
-                <td class="tablecell"> ячейка 7 </td>
-                <td class="tablecell"> ячейка 8 </td>
-                <td style="background-color: coral" class="tablecell"> ячейка 9</td>
-            </tr>
-            </tbody>
-        </table>
-    </section>
+            <table id="table1">
+                <caption>Объединение столбцов</caption>
+                <thead>
+                    <tr>
+                        <th class="tablehead">столбец 1</th>
+                        <th class="tablehead">столбец 2</th>
+                        <th class="tablehead">столбец 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tablecell"> ячейка 111111111 11111111 </td>
+                        <td class="tablecell">
+                            <img src="assets/html5.png" alt="html5 logo" />
+                        </td>
+                        <td class="tablecell"> ячейка 3</td>
+                    </tr>
+                    <tr>
+                        <td class="tablecell" colspan=2> ячейка 4 </td>
+                        <td class="tablecell"> ячейка 6</td>
+                    </tr>
+                    <tr>
+                        <td class="tablecell"> ячейка 7 </td>
+                        <td class="tablecell"> ячейка 8 </td>
+                        <td style="background-color: coral" class="tablecell"> ячейка 9</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                <button id="add-row">Добавить строку</button> <br />
+                <button id="rem-row">Удалить строку</button> <br />
+                <button id="ch-color">Поменять цвет</button>
+            </p>
+        </section>
 
-    <section>
-        <h2>Список обычный</h2>
+        <section>
+            <h2>Список обычный</h2>
 
-        <ul class="active-list">
-            <li>Элемент списка</li>
-            <li>Элемент списка</li>
-            <li>Элемент списка</li>
-            <li>Элемент списка</li>
-            <li> Вложенный список
-                <ul>
-                    <li>Элемент списка</li>
-                    <li>Элемент списка</li>
-                    <li>Элемент списка</li>
-                    <li>Элемент списка</li>
-                    <li>Элемент списка</li>
-                </ul>
-            </li>
-            <li>Элемент списка</li>
-            <li>Элемент списка</li>
-            <li>Элемент списка</li>
-            <li>Элемент списка</li>
-        </ul>
-    </section>
+            <ul class="active-list">
+                <li>Элемент списка</li>
+                <li>Элемент списка</li>
+                <li>Элемент списка</li>
+                <li>Элемент списка</li>
+                <li> Вложенный список
+                    <ul>
+                        <li>Элемент списка</li>
+                        <li>Элемент списка</li>
+                        <li>Элемент списка</li>
+                        <li>Элемент списка</li>
+                        <li>Элемент списка</li>
+                    </ul>
+                </li>
+                <li>Элемент списка</li>
+                <li>Элемент списка</li>
+                <li>Элемент списка</li>
+                <li>Элемент списка</li>
+            </ul>
+        </section>
 
-    <section>
-        <h2>Какое-то содержимое</h2>
-        <p>Содержимое страницы Содержимое страницы Содержимое страницы Содержимое страницы Содержимое страницы </p>
-    </section>
+        <section>
+            <h2>Какое-то содержимое</h2>
+            <p>Содержимое страницы Содержимое страницы Содержимое страницы Содержимое страницы Содержимое страницы </p>
+        </section>
 
-</main>
+        <section>
+            <h2>Кнопка окна</h2>
+            <button name="dialog-btn">Открыть</button>
+        </section>
 
-<footer>
-    Footer content
-</footer>
+        <section>
+            <h2>Галерея</h2>
+            <div id="gallery">
+                <div class="frame">
+                    <img src=""/>
+                </div>
+                <div class="caption"></div>
+                <div class="controls">
+                    <button class="control prev">&lt; Туда</button>
+                    <button class="control next">&gt; Сюда</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        Footer content
+    </footer>
+
+    <script>
+        function withSelector(selector) {
+            const base = document.querySelector(selector);
+
+            return [
+                sel => base.querySelector(sel),
+                sel => base.querySelectorAll(sel)
+            ];
+        }
+
+        window.addEventListener('load', () => {
+            const [btn] = document.getElementsByName("dialog-btn");
+        
+            btn.addEventListener("mousemove", () => alert("Фёдоров Александр Валентинович Z8431"));
+        
+            const tbl = document.querySelector("#table1");
+
+            document.querySelector("#add-row").addEventListener('click', () => {
+                const fragment = document.createDocumentFragment();
+                const heads = table1.querySelectorAll("th");
+                const row = document.createElement("tr")
+
+                let cel;
+                for (const head of heads) {
+                    cell = document.createElement("td");
+                    cell.innerHTML = "New cell";
+                    cell.setAttribute("class", "tablecell");
+                    row.appendChild(cell);
+                }
+
+                fragment.appendChild(row);
+                tbl.querySelector("tbody")
+                    .appendChild(fragment);
+            });
+
+            document.querySelector("#rem-row").addEventListener('click', () => {
+                tbl.querySelector("tbody tr:last-child")?.remove();
+            });
+
+            function getHeadsColorChanger(color) {
+                let changed = false;
+
+                return () => {
+                    const heads = document.querySelectorAll("h2");
+                    for (const head of heads) {
+                        if (changed) {
+                            head.style.backgroundColor = '';
+                        }
+                        else {
+                            head.style.backgroundColor = color;
+                        }
+                    }
+
+                    changed = !changed;
+                };
+            }
+
+            document.querySelector("#ch-color")
+                .addEventListener("click", getHeadsColorChanger("brown"));
+ 
+
+            {
+                const images = [
+                    ['1.jpeg', 'Картинка 1'],
+                    ['2.jpeg', 'Картинка 2'],
+                    ['3.jpeg', 'Картинка 3']
+                ];
+
+                let current = 0;
+                const [ get ] = withSelector("#gallery");
+
+                const img = get(".frame img");
+                const caption = get(".caption");
+                const setImg = idx => {
+                    img.setAttribute("src", `assets/img/${images[idx][0]}`);
+                    caption.innerHTML = images[idx][1];
+                };
+
+                function changeImg(direct) {
+                    let next = current;
+
+                    switch (direct) {
+                        case -1:
+                            next += direct;
+                            if (next < 0) {
+                                next = images.length - 1;
+                            }
+                            break;
+
+                        case 1:
+                            next += direct;
+                            if (next > images.length - 1) {
+                                next = 0;
+                            }
+                            break;
+                    }
+
+                    current = next;
+                    setImg(current);
+                }
+
+                setImg(current);
+                get(".controls .next").addEventListener('click', changeImg.bind(null, 1));
+                get(".controls .prev").addEventListener('click', changeImg.bind(null, -1));
+            }
+        });
+    </script>
 
 </body>
+
 </html>
