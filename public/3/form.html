@@ -1,0 +1,113 @@
+<!doctype html>
+
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Дополненная реальность</title>
+
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Дополненная реальность [1]</h1>
+    </header>
+
+    <hr />
+    <main>
+
+        <section>
+            <h2>Форма</h2>
+            <form id="form">
+                <p>
+                    <label>ФИО
+                        <input name="fio" type="text" />
+                    </label>
+                </p>
+                <p>
+                    <label>Пробовал гаджет
+                        <select name="oculus">
+                            <option>Oculus</option>
+                            <option>Другие</option>
+                            <option>Совсем другие</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <fieldset>
+                        <legend>Понравилось ли</legend>
+
+                        <label>Да
+                            <input type="radio" name="test" value="да" />
+                        </label>
+                        <label>Нет
+                            <input type="radio" name="test" value="нет" />
+                        </label>
+                    </fieldset>
+                </p>
+
+                <p>
+                    <fieldset>
+                        <legend>Понравилось</legend>
+                    
+                        <label>Цена
+                            <input type="checkbox" name="like[]" value="cena" />
+                        </label>
+                        <label>Качество
+                            <input type="checkbox" name="like[]" value="kach" />
+                        </label>
+                        <label>Удобство
+                            <input type="checkbox" name="like[]" value="udob" />
+                        </label>
+                    </fieldset>
+                </p>
+
+                <button id="form-submit">Отправить</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Результат</h2>
+            <div id="result"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        Footer content
+    </footer>
+
+    <script>
+        function withSelector(selector) {
+            const base = document.querySelector(selector);
+
+            return [
+                sel => base.querySelector(sel),
+                sel => base.querySelectorAll(sel)
+            ];
+        }
+
+        window.addEventListener('load', () => {
+            const form = document.querySelector("#form");
+            const result = document.querySelector("#result");
+
+            const [ get ] = withSelector("#form");
+
+            get("#form-submit").addEventListener("click", (e) => {
+                e.preventDefault();
+                const query = new URLSearchParams(new FormData(form));
+
+                fetch('form.php?' + query)
+                    .then(response => response.text())
+                    .then(html => result.innerHTML = html);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
