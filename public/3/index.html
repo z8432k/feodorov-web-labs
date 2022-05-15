@@ -22,7 +22,83 @@
         #tbl th {
             padding: 3mm 10mm;
         }
+
+        #gallery {
+            width: 200px;
+        }
     </style>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('popupbtn')
+                .addEventListener('click', () => alert("Прокофьев Михаил Сергеевич Z8431"));
+
+
+            var gallery = document.getElementsByTagName('img')[0];
+            var images = 3;
+            var current = 1;
+
+            function changeImg(idx) {
+                gallery.setAttribute('src', 'assets/img/'+ idx +'.jpeg');
+            }
+
+            function change() {
+                var next = current + 1;
+
+                if (next > images) {
+                    next = 1;
+                }
+
+                current = next;
+                changeImg(current);
+            }
+
+            setInterval(change, 2000);
+
+            changeImg(current);
+
+            document.getElementById('gallery')
+                .addEventListener('mouseover', change);
+
+            document.getElementById('add')
+                .addEventListener('click', addRow);
+            document.getElementById('delete')
+                .addEventListener('click', deleteRow);
+
+            document.getElementById('color')
+                .addEventListener('click', () => {
+                    if (document.body.style.color == '') {
+                        document.body.style.color = 'red';
+                    }
+                    else {
+                        document.body.style.color = '';
+                    }
+                });
+        });
+
+        function deleteRow() {
+            var table = document.getElementById('tbl');
+            table.deleteRow(table.rows.length - 1);
+        }
+
+        function addRow() {
+            var tbody = document.getElementById('tbl').getElementsByTagName('tbody')[0];
+            var row = document.createElement("tr");
+            tbody.appendChild(row);
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+            var td3 = document.createElement("td");
+            var td4 = document.createElement("td");
+            row.appendChild(td1);
+            row.appendChild(td2);
+            row.appendChild(td3);
+            row.appendChild(td4);
+            td1.innerHTML = "1";
+            td2.innerHTML = "2";
+            td3.innerHTML = "3";
+            td4.innerHTML = "4";
+        }
+    </script>
 
 </head>
 
@@ -36,6 +112,14 @@
         <a href="index2.html">Стр 2</a>
     </nav>
 
+    <button id="popupbtn">popup</button>
+    <button id="color">color</button>
+
+
+    <div>
+        <h2>Галерея</h2>
+        <img id="gallery" src="" alt="gallery" />
+    </div>
 
     <div>
         <h2>Таблица</h2>
@@ -70,6 +154,8 @@
                 </tr>
             </tbody>
         </table>
+        <button id="add">Добавить</button>
+        <button id="delete">Удалить</button>
     </div>
 
     <div>
