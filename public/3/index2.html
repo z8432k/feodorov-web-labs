@@ -24,36 +24,53 @@
 </nav>
 
 <div>
-    <h2>Список трёхуровневый</h2>
+    <h2>Форма</h2>
+    <form method="get" action="server.php">
+        <p>
+            <label>ФИО:
+                <input name="user" type="text" />
+            </label>
+        </p>
+        <p>
+            <label>Метод анализа
+                <select name="method">
+                    <option>crautsourcing</option>
+                    <option>machinelearning</option>
+                    <option>staticanalisys</option>
+                </select>
+            </label>
+        </p>
+        <p>
+        <fieldset>
+            <legend>Практика применения</legend>
 
-    <ul>
-        <li>Первый уровень</li>
-        <li>Первый уровень</li>
-        <li>Первый уровень</li>
-        <li>Первый уровень</li>
-        <li>
-            <ul>
-                <li>Второй уровень</li>
-                <li>Второй уровень</li>
-                <li>Второй уровень</li>
-                <li>
-                    <ul>
-                        <li>Третий уровень</li>
-                        <li>Третий уровень</li>
-                        <li>Третий уровень</li>
-                        <li>Третий уровень</li>
-                        <li>Третий уровень</li>
-                    </ul>
-                </li>
-                <li>Второй уровень</li>
-                <li>Второй уровень</li>
-            </ul>
-        </li>
-        <li>Первый уровень</li>
-        <li>Первый уровень</li>
-        <li>Первый уровень</li>
-        <li>Первый уровень</li>
-    </ul>
+            <label>Да
+                <input type="radio" name="practice" value="да" />
+            </label>
+            <label>Нет
+                <input type="radio" name="practice" value="нет" />
+            </label>
+        </fieldset>
+        </p>
+
+        <p>
+        <fieldset>
+            <legend>Технологии</legend>
+
+            <label>NoSQL
+                <input type="checkbox" name="tech[]" value="nosql" />
+            </label>
+            <label>Hadoop
+                <input type="checkbox" name="tech[]" value="hadoop" />
+            </label>
+            <label>MapReduce
+                <input type="checkbox" name="tech[]" value="mapreduce" />
+            </label>
+        </fieldset>
+        </p>
+
+        <button type="submit">Отправить</button>
+    </form>
 </div>
 
 <footer>
