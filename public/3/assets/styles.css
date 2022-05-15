@@ -1,41 +1,16 @@
 body {
-    background-color: rgb(135, 206, 250);
-    user-select: none;
+    background-color: green;
 }
 
 footer {
-    background-color: lightcyan;
-    padding: 20px 10px;
+    padding: 30px 20px;
+    border: 2px dotted rgb(0, 0, 255);
 }
 
-#gallery {
-    border: 2px solid red;
-    padding: 3px;
-    margin: 10px 0;
-    max-width: 300px;;
+td {
+    border: 2px solid lightsteelblue;
 }
 
-#gallery > div {
-    border: 2px solid green;
-    padding: 3px;
-}
-
-#gallery .caption {
-    margin-top: 5px;
-}
-
-#gallery .controls {
-    margin-top: 5px;
-    border: 2px solid lightsalmon;
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-}
-
-#gallery .control {
-    padding: 5px 10px;
-}
-
-#gallery .frame img {
-    width: 100%;
+td img {
+    max-width: 240px;
 }
